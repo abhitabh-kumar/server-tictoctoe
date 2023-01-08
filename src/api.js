@@ -6,7 +6,9 @@ const app=express();
 const router=express.Router();
 
 router.get('/',(req,res)=>{
-    res.send("Express on Vercel");
+    res.json({
+        'hello':'hii!'
+    });
 });
 
 app.use('/.netlify/functions/api',router)
